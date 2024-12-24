@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import '../../view_models/login_view_model.dart';
 import 'package:provider/provider.dart';
@@ -25,6 +27,12 @@ class LoginView extends StatelessWidget {
               controller: emailController,
               decoration: const InputDecoration(labelText: 'Email'),
             ),
+            const SizedBox(height: 16),
+            TextField(
+              controller: passwordController,
+              decoration: const InputDecoration(labelText: 'Password'),
+              obscureText: true,
+            ),
             const SizedBox(height: 24),
             ElevatedButton(
               onPressed: () async {
@@ -35,7 +43,7 @@ class LoginView extends StatelessWidget {
 
                 if (loginViewModel.error != null){
                   ScaffoldMessenger.of(context).showSnackBar(
-                    SnackBar(content: Text(loginViewModel.error!)),
+                    SnackBar(content: Text(loginViewModel.error!)), //! je null assertion operator, compilerju pove da smo ziher da spremenljivka ni null na tej točki(tu pretvori nullable String? v String)
                   );
                 }
               },

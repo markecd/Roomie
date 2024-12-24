@@ -7,7 +7,7 @@ class LoginViewModel extends ChangeNotifier {
   User? _user;
   String? _error;
 
-  User? get user => _user;
+  User? get user => _user; //? naredi _user spremenljivko nullable
   String? get error => _error;
 
   Future<void> login(String email, String password) async {

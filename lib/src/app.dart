@@ -1,23 +1,27 @@
-class User{
-  final String id;
-  final String name;
-  final String email;
+import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'view_models/login_view_model.dart';
+import 'ui/views/login_view.dart';
 
-  User({required this.id, required this.name, required this.email});
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
 
-  factory User.fromJson(Map<String, dynamic> json){ //Map je data structure, ki shrani pare ključ vrednost;dynamic omogoča fleksibilnost za obdelavo različnih tipov podatkov
-    return User(
-      id: json['id'],
-      name: json['name'],
-      email: json['email'],
+  @override
+  Widget build(BuildContext context) {
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (_) => LoginViewModel()),
+      ],
+      child: MaterialApp(
+        title: 'Flutter Demo',
+        theme: ThemeData(
+          primarySwatch: Colors.blue,
+        ),
+        initialRoute: '/',
+        routes: {
+          '/': (context) => LoginView(),
+        },
+      ),
     );
-  }
-
-  Map<String, dynamic> toJson(){
-    return {
-      'id': id,
-      'name': name,
-      'email': email,
-    };
   }
 }
