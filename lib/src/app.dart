@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 import 'ui/views/main_view.dart';
 import 'view_models/login_view_model.dart';
 import 'ui/views/login_view.dart';
+import 'ui/views/register_view.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -20,8 +21,9 @@ class MyApp extends StatelessWidget {
         ),
         initialRoute: '/home', // Cepalica - daš nazaj na login
         routes: {
-          '/': (context) => LoginView(),
           '/home': (context) => MainView(),
+          '/': (context) => RegisterView(),
+          '/login': (context) => LoginView(),
         },
       ),
     );

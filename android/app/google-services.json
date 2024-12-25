@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "497575325787",
+    "project_id": "roomie-d8f75",
+    "storage_bucket": "roomie-d8f75.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:497575325787:android:36a3e88ee807404c400f7e",
+        "android_client_info": {
+          "package_name": "com.example.roomie"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCHDDwZbsxKCw5zIF-78GUPztM7u7rgPVQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:497575325787:android:86499e2e2180ecf7400f7e",
+        "android_client_info": {
+          "package_name": "come.marexmare.roomie"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCHDDwZbsxKCw5zIF-78GUPztM7u7rgPVQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

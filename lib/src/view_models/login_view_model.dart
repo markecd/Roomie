@@ -19,4 +19,14 @@ class LoginViewModel extends ChangeNotifier {
     }
     notifyListeners();
   }
+
+  Future<void> register(String name, String surname, String email, String password) async {
+    try{
+      _user = await _userRepository.register(name, surname, email, password);
+      _error = null;
+    } catch(e) {
+      _error = e.toString();
+    }
+    notifyListeners();
+  }
 }
