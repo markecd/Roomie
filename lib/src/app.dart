@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'view_models/login_view_model.dart';
 import 'ui/views/login_view.dart';
+import 'ui/views/register_view.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -19,7 +20,8 @@ class MyApp extends StatelessWidget {
         ),
         initialRoute: '/',
         routes: {
-          '/': (context) => LoginView(),
+          '/': (context) => RegisterView(),
+          '/login': (context) => LoginView(),
         },
       ),
     );
