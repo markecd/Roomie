@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'ui/views/main_view.dart';
 import 'view_models/login_view_model.dart';
 import 'ui/views/login_view.dart';
 
@@ -17,9 +18,10 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        initialRoute: '/',
+        initialRoute: '/home', // Cepalica - daš nazaj na login
         routes: {
           '/': (context) => LoginView(),
+          '/home': (context) => MainView(),
         },
       ),
     );
