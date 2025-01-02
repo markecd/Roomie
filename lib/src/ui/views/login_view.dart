@@ -49,6 +49,7 @@ class LoginView extends StatelessWidget {
                   ScaffoldMessenger.of(context).showSnackBar(
                     SnackBar(content: Text('Login successful! tu zj morma nardit redirect na home')),
                   );
+                   Navigator.pushReplacementNamed(context, '/home');
                 }
               },
               child: const Text('Login'),

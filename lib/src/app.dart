@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        initialRoute: '/home', // Cepalica - daš nazaj na login
+        initialRoute: '/', // Cepalica - daš nazaj na login
         routes: {
           '/home': (context) => MainView(),
           '/': (context) => RegisterView(),

@@ -5,6 +5,8 @@ class Header extends StatelessWidget implements PreferredSizeWidget {
   final IconData icon;
   final VoidCallback onIconPressed;
 
+  
+
   const Header({
     super.key,
     required this.logoAssetPath,
@@ -21,7 +23,7 @@ class Header extends StatelessWidget implements PreferredSizeWidget {
         children: [
          
           Image.asset(
-            logoAssetPath, 
+            logoAssetPath , 
             height: 150, 
           ),
         
